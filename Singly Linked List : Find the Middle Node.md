@@ -36,10 +36,42 @@ To write a Python program that:
 ---
 
 ## 💻 Program
-Add code here
+```
+class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = None
+      
+class LinkedList:
+  
+    def __init__(self):
+        self.head = None
+  
+    # create Node and make linked list
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+          
+    def printMiddle(self):
+        slow=self.head
+        fast=self.head
+        while(fast and fast.next):
+            slow=slow.next
+            fast=fast.next.next
+        print(slow.data)
+          
+llist = LinkedList() 
+for i in range(5):
+    value = input()
+    llist.push(value)
 
+llist.printMiddle()
+```
 ## Sample Input & Output
 
-## Result
+<img width="1021" height="292" alt="image" src="https://github.com/user-attachments/assets/53a06853-8c01-4e8b-a4ad-929dd55abcb8" />
 
+## Result
+Thus to write a python program to find the middle node of a Single Linked list using recursion is created and executed successfully.
 
