@@ -26,8 +26,45 @@ To write a Python program to search for a given element in a singly linked list 
 ---
 
 ## 💻 Program
-Add Code Here
+```
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+class LinkedList:
+    def __init__(self):
+        self.head = None
+ 
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+ 
+    def search(self, x):
+        temp=self.head
+        while(temp):
+            if(temp.data==x):
+                return True
+            temp=temp.next
+        return False
+ 
+llist = LinkedList()
+ 
+llist.push(10);
+llist.push(30);
+llist.push(11);
+llist.push(21);
+llist.push(14);
+
+data = int(input())
+if llist.search(data):
+    print("Yes")
+else:
+    print("No")
+```
 ## Sample Output
 
-## Result
+<img width="981" height="247" alt="image" src="https://github.com/user-attachments/assets/4d1d5e39-820f-4ea8-b954-23305b12980f" />
 
+## Result
+To write a Python program to search for a given element in a singly linked list using object-oriented programming principles is created and executed successfully.
